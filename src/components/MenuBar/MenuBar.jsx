@@ -1,28 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {MenubarContainer} from './MenuBar.styles'
+import {
+  MenubarContainer,
+  MenuItems,
+  HamburgerButton,
+  Bar
+} from './MenuBar.styles';
 
-export default function menubar() {
+export default function MenuBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
+
   return (
     <MenubarContainer>
-        <Link>
-            <label className='cursorLabel'>Tela inicial</label>
-        </Link>
-        <Link>
-            <label className='cursorLabel'>Cadastro</label>
-        </Link>
-        <Link>
-            <label className='cursorLabel'>Perfil</label>
-        </Link>
-        <Link>
-            <label className='cursorLabel'>Vagas</label>
-        </Link>
-        <Link>
-            <label className='cursorLabel'>Trilha</label>
-        </Link>
-        <Link>
-            <label className='cursorLabel'>Inovação</label>
-        </Link>
+      <HamburgerButton onClick={toggleMenu}>
+        <Bar />
+        <Bar />
+        <Bar />
+      </HamburgerButton>
+
+      <MenuItems isOpen={isOpen}>
+        <Link><label className="cursorLabel">Tela inicial</label></Link>
+        <Link><label className="cursorLabel">Cadastro</label></Link>
+        <Link><label className="cursorLabel">Perfil</label></Link>
+        <Link><label className="cursorLabel">Vagas</label></Link>
+        <Link><label className="cursorLabel">Trilha</label></Link>
+        <Link><label className="cursorLabel">Inovação</label></Link>
+      </MenuItems>
     </MenubarContainer>
-  )
+  );
 }
