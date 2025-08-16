@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
-export const PanelCentralContainer = styled.div`
-  display: flex;
+export const InicioContainer = styled.div`
+    display: flex;
+  align-items: center;
   justify-content: center;
+    background-color: rgb(208, 152, 235);
+  
   flex-direction: column;
   min-height: 100vh;
+  padding: 20px;
   box-sizing: border-box;
-  background-color: white
 
   img {
     max-width: 100%;
@@ -26,4 +29,4 @@ export const PanelCentralContainer = styled.div`
       font-size: 1.2rem;
     }
   }
-`;
+`

@@ -23,10 +23,11 @@ export default function MenuBar() {
       </HamburgerButton>
 
       <MenuItems isOpen={isOpen}>
-        <Link><label className="cursorLabel">Tela inicial</label></Link>
-        <Link><label className="cursorLabel">Cadastro</label></Link>
-        <Link><label className="cursorLabel">Perfil</label></Link>
-        <Link><label className="cursorLabel">Vagas</label></Link>
+        <Link to='/'><label className="cursorLabel">Tela inicial</label></Link>
+        {/* <Link><label className="cursorLabel">Cadastro</label></Link> */}
+        <Link to='/perfil'><label className="cursorLabel">Perfil</label></Link>
+        {/* <Link><label className="cursorLabel">Vagas</label></Link> */}
+        <Link to='/contato'><label htmlFor="" className="cursorLabel">Contate-nos</label></Link>
         <Link><label className="cursorLabel">Trilha</label></Link>
         <Link><label className="cursorLabel">Inovação</label></Link>
       </MenuItems>
