@@ -12,7 +12,6 @@ export default function Inicio() {
   return (
     <InicioContainer>
       <img src={carreiras} alt="" />
-      <img src={cps} alt="" />
       <img src={maleta} alt="" />
       <img src={teapro} alt="" />
       <br />
